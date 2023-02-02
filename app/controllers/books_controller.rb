@@ -68,4 +68,8 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :number_of_pages, :image)
     end
+    
+    def show
+      @book_review = BookReview.new
+    end
 end
